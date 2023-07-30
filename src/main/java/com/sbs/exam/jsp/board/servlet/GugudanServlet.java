@@ -1,4 +1,4 @@
-package servlet;
+package com.sbs.exam.jsp.board.servlet;
 
 import com.sbs.exam.jsp.board.Rq;
 
