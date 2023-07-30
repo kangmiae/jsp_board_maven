@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 
 @WebServlet("/gugudan")
 
@@ -29,6 +28,10 @@ public class GugudanServlet extends HttpServlet {
     // -- http://localhost:8081/gugudan?dan=5&limit=5
     // -- http://localhost:8081/gugudan?dan=5
     // -- http://localhost:8081/gugudan
+
+    // Rq와 같은 servlet의 단점
+    // html을 한눈에 볼수 없다는데 있다.
+    // 그래서 이것을 webapp안에 jsp를 만들어 사용한다.
     Rq rq = new Rq(req, resp);
     int dan = rq.getIntParam("dan", 9);
     int limit = rq.getIntParam("limit", 9);
