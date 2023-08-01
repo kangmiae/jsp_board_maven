@@ -1,0 +1,43 @@
+
+Z
+java:S1163ˆ"=Refactor this code to not throw exceptions in finally blocks.(ŠæÌ[8ñØ÷°š1
+Z
+java:S1163‘"=Refactor this code to not throw exceptions in finally blocks.(ŠæÌ[8ñØ÷°š1
+Z
+java:S1163Ï"=Refactor this code to not throw exceptions in finally blocks.(ŠæÌ[8ñØ÷°š1
+Z
+java:S1163Ø"=Refactor this code to not throw exceptions in finally blocks.(ŠæÌ[8òØ÷°š1
+Z
+java:S1163ò"=Refactor this code to not throw exceptions in finally blocks.(ŠæÌ[8òØ÷°š1
+Q
+java:S1143ˆ"4Remove this throw statement from this finally block.(ŠæÌ[8òØ÷°š1
+Q
+java:S1143‘"4Remove this throw statement from this finally block.(ŠæÌ[8òØ÷°š1
+Q
+java:S1143Ï"4Remove this throw statement from this finally block.(ŠæÌ[8òØ÷°š1
+Q
+java:S1143Ø"4Remove this throw statement from this finally block.(ŠæÌ[8òØ÷°š1
+Q
+java:S1143ò"4Remove this throw statement from this finally block.(ŠæÌ[8òØ÷°š1
+\
+java:S1118	":Add a private constructor to hide the implicit public one.(Ú÷òûÿÿÿÿ8ûãá°š1
+I
+java:S1125("'Remove the unnecessary boolean literal.(¡õşµûÿÿÿÿ8€Ù÷°š1
+I
+java:S1125<"'Remove the unnecessary boolean literal.(¡õşµûÿÿÿÿ8„Ù÷°š1
+O
+java:S4925>"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8…Ù÷°š1
+[
+java:S1155W">Use isEmpty() to check whether the collection is empty or not.(Ù­8‡Ù÷°š1
+W
+java:S2864œ"4Iterate over the "entrySet" instead of the "keySet".(³›Í¨şÿÿÿÿ8ŠÙ÷°š1
+S
+java:S1751"6Remove this "return" statement or make it conditional.(Ô¦Ú8ŠÙ÷°š1
+W
+java:S2864¦"4Iterate over the "entrySet" instead of the "keySet".(³›Í¨şÿÿÿÿ8‹Ù÷°š1
+Y
+java:S1751§"6Remove this "return" statement or make it conditional.(˜£„Šÿÿÿÿÿ8‹Ù÷°š1
+W
+java:S2864°"4Iterate over the "entrySet" instead of the "keySet".(³›Í¨şÿÿÿÿ8‹Ù÷°š1
+Y
+java:S1751±"6Remove this "return" statement or make it conditional.(øæû«øÿÿÿÿ8‹Ù÷°š1
