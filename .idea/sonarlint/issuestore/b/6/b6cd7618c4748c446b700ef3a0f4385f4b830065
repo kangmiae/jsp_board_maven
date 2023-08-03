@@ -1,8 +1,0 @@
-
-q
-java:S2095-"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(º±Â÷ûÿÿÿÿ8‚¾±š1
-q
-java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(î²şûÿÿÿÿ8‚¾±š1
-v
-java:S3012#"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Ïº·²8Áùù°š1
-U	java:S106>"9Replace this use of System.out or System.err by a logger.(°¾¸õ8Äùù°š1

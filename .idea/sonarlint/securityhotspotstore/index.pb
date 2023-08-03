@@ -3,8 +3,6 @@ E
 src/webapp/index.html,0\c\0cc4925ffd876dc10110f64fc429bb483fc38f18
 ^
 .src/main/java/com/sbs/exam/jsp/board/Main.java,d\0\d0da6545f1038531f63ca7725c9ce7c979cb86f5
-j
-:src/main/java/com/sbs/exam/jsp/board/mysqlutil/SecSql.java,b\6\b6cd7618c4748c446b700ef3a0f4385f4b830065
 v
 Fsrc/main/java/com/sbs/exam/jsp/board/mysqlutil/MysqlUtilException.java,6\3\6318ec77afcecfb20f2d8eab2eb03d798dc33960
 m
@@ -15,9 +13,5 @@ H
 src/webapp/gugudan_2.jsp,7\2\724f5bb1d096191c9dd82dae228b1aae3d5101a8
 H
 src/webapp/home/main.jsp,f\9\f9f7dc1fe8d0edd07a637218fb2564242386d2ba
-O
-src/webapp/usr/article/list.jsp,9\b\9b58b8b2d78d7bf689554d0d7a6bcce6b0eb0d04
 P
  src/webapp/usr/article/write.jsp,4\a\4af2352eeb1921138379f69a8e0a44e6cfe06679
-p
-@src/main/java/com/sbs/exam/jsp/board/servlet/DoWriteServlet.java,5\2\52607e70ecaf6809887f760c7002d4846d71b3dd

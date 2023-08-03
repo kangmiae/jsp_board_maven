@@ -20,20 +20,33 @@ public class UsrArticleListServlet extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     Rq rq = new Rq(req,resp);
 
     //DB연결을 위해 반드시 있어야 한다.
     MysqlUtil.setDBInfo("localhost","root","password","jspboard_db");
     MysqlUtil.setDevMode(true);
 
+    int page = rq.getIntParam("page", 1);
+    int itemInAPage = 20;
+    int itemInAFrom = (page -1) * itemInAPage;
+
     SecSql sql = new SecSql();
+    sql.append("SELECT COUNT(*) AS cnt FROM article");
+    int totalCount = MysqlUtil.selectRowIntValue(sql); //숫자를 반환한다.
+    int totalPage = (int) Math.ceil((double) totalCount / itemInAPage);
+
+    sql = new SecSql();
     sql.append("SELECT A.*");
     sql.append("FROM article AS A");
     sql.append("ORDER BY A.id DESC");
+    sql.append("LIMIT ?, ?", itemInAFrom, itemInAPage);
 
     List<Map<String, Object>> articlesRows = MysqlUtil.selectRows(sql);
 
     req.setAttribute("articleRows",articlesRows);
+    req.setAttribute("page",page);
+    req.setAttribute("totalPage",totalPage);
 
     RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/list.jsp");
     requestDispatcher.forward(req,resp);
