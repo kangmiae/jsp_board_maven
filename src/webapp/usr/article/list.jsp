@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%--<%@ page import="com.sbs.exam.jsp.board.Rq"%>--%>
 
+<%--꼭 해워야 한다. DB에서 검색한 데이터 받아오려면--%>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Map" %>
 
@@ -87,6 +88,39 @@
     </li>
     <% } %>
   </ul>
+
+  <%--  테이블 이용하기 --%>
+  <h1>게시물 리스트 ver 5.0</h1>
+  <table border="1" style="border-collapse: collapse; text-align:center">
+    <colgroup>
+      <col width = "50px">
+      <col width = "200px">
+      <col width = "200px">
+      <col width = "100px">
+      <col width = "100px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>작성날짜</th>
+        <th>수정날짜</th>
+        <th>제목</th>
+        <th>내용</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (Map<String, Object> articleRow : articleRows) {
+      %>
+      <tr>
+        <td><%= articleRow.get("id") %>번</td>
+        <td><%= articleRow.get("regDate") %></td>
+        <td><%= articleRow.get("updateDate") %></td>
+        <td><%= articleRow.get("title") %></td>
+        <td><%= articleRow.get("content") %></td>
+      <% } %>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
