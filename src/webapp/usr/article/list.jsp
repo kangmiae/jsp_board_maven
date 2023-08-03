@@ -126,5 +126,9 @@
     </tbody>
   </table>
 
+  <div>
+    <a href="write">게시물작성</a>
+  </div>
+
 </body>
 </html>

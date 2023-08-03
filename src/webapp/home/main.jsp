@@ -13,7 +13,9 @@
 
 <h1>메인페이지</h1>
 <div>
+  <a href="/usr/article/write">게시물 작성</a>
   <a href="/usr/article/list">리스트로 이동</a>
 </div>
+
 </body>
 </html>
