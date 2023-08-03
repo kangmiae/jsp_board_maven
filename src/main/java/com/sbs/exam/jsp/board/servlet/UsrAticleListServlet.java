@@ -39,6 +39,8 @@ public class UsrAticleListServlet extends HttpServlet {
     RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/list.jsp");
     requestDispatcher.forward(req,resp);
 
+    MysqlUtil.closeConnection();
+
   }
 
   @Override

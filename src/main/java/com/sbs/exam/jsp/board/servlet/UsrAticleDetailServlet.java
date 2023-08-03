@@ -30,7 +30,7 @@ public class UsrAticleDetailServlet extends HttpServlet {
     int id = rq.getIntParam("id", 0);
 
     if(id == 0) {
-      rq.appendbody("<script>alert('번호를 입력해 주세요.'); history.back(); </script>");
+      rq.appendBody("<script>alert('번호를 입력해 주세요.'); history.back(); </script>");
       return;
     }
 
@@ -47,6 +47,8 @@ public class UsrAticleDetailServlet extends HttpServlet {
 //    RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/detail.jsp"); //이렇게 해도 되고 아래처럼 해도 되고
     RequestDispatcher requestDispatcher = req.getRequestDispatcher("../article/detail.jsp");
     requestDispatcher.forward(req,resp);
+
+    MysqlUtil.closeConnection();
 
   }
 

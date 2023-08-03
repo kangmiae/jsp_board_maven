@@ -38,6 +38,8 @@ public class HomeMainServlet extends HttpServlet {
     RequestDispatcher requestDispatcher = req.getRequestDispatcher("/home/main.jsp");
     requestDispatcher.forward(req,resp);
 
+    MysqlUtil.closeConnection();
+
   }
 
   @Override

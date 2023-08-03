@@ -31,17 +31,28 @@ public class Rq {
 
     try {
       return Integer.parseInt(value);
-    } catch (NumberFormatException e){
+    } catch (NumberFormatException e) {
       return defaultValue;
     }
   }
 
-  public void appendbody(String str) {
+  public void appendBody(String str) {
     try {
       resp.getWriter().append(str);
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
+  }
+
+  public String getParam(String paramName, String defaultValue) {
+    String value = req.getParameter(paramName);
+
+    if (value == null) {
+      return defaultValue;
+    }
+
+    return value;
+
   }
 
 }

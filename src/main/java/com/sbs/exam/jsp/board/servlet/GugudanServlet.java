@@ -40,12 +40,12 @@ public class GugudanServlet extends HttpServlet {
     int j = 1;
 
     resp.getWriter().append("<h1>구구단 만들기</h1>\n\n");
-    rq.appendbody(String.format("<h2>%d 단</h2>\n",dan));
+    rq.appendBody(String.format("<h2>%d 단</h2>\n",dan));
 
     //rq라는 class 만들어도 이용 한다 : 입출력을 이거 하나로 사용한다.
     resp.getWriter().append("=======\n");
     for ( i = 1; i <= limit; i++) {
-      rq.appendbody(String.format("<div>%d * %d = %d</div>\n", dan, i, dan * i));
+      rq.appendBody(String.format("<div>%d * %d = %d</div>\n", dan, i, dan * i));
     }
     resp.getWriter().append("=======\n");
 
