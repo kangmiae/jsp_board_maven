@@ -14,16 +14,31 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/usr/article/write")
+@WebServlet("/usr/article/list")
 
-public class UsrAticleWriteServlet extends HttpServlet {
+public class UsrArticleListServlet extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     Rq rq = new Rq(req,resp);
 
-    RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/write.jsp");
+    //DB연결을 위해 반드시 있어야 한다.
+    MysqlUtil.setDBInfo("localhost","root","password","jspboard_db");
+    MysqlUtil.setDevMode(true);
+
+    SecSql sql = new SecSql();
+    sql.append("SELECT A.*");
+    sql.append("FROM article AS A");
+    sql.append("ORDER BY A.id DESC");
+
+    List<Map<String, Object>> articlesRows = MysqlUtil.selectRows(sql);
+
+    req.setAttribute("articleRows",articlesRows);
+
+    RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/list.jsp");
     requestDispatcher.forward(req,resp);
+
+    MysqlUtil.closeConnection();
 
   }
 
