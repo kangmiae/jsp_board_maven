@@ -11,8 +11,6 @@ F
 src/webapp/gugudan.jsp,c\2\c2b95dd172e6d266eba6ad2129b7e4710c053236
 H
 src/webapp/gugudan_2.jsp,7\2\724f5bb1d096191c9dd82dae228b1aae3d5101a8
-H
-src/webapp/home/main.jsp,f\9\f9f7dc1fe8d0edd07a637218fb2564242386d2ba
 P
  src/webapp/usr/article/write.jsp,4\a\4af2352eeb1921138379f69a8e0a44e6cfe06679
 7
