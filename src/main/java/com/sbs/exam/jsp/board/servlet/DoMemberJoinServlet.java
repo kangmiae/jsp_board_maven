@@ -30,6 +30,17 @@ public class DoMemberJoinServlet extends HttpServlet {
     String name = rq.getParam("nm","");
 
     SecSql sql = new SecSql();
+    sql.append("SELECT count(*) as cnt");
+    sql.append("FROM member_t");
+    sql.append("WHERE loginid = ?", loginId);
+
+// 중복체크 이런방법도 있고
+    int isCnt = MysqlUtil.selectRowIntValue(sql);
+    if (isCnt != 0) {
+      rq.appendBody("<script>alert('해당 아이디로 회원이 이미 존재합니다.'); history.back(); </script>");
+    }
+
+    sql = new SecSql();
     sql.append("INSERT INTO member_t");
     sql.append("SET regDate = NOW() ");
     sql.append("   ,updateDate = NOW() ");

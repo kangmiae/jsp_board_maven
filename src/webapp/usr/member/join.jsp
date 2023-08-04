@@ -68,16 +68,16 @@
 
   <form action="doJoin" method="post" onsubmit="JoinForm_submit(this); return false;">
     <div>
-      로그인 아이디 : <input autocomplete="off" type="text" name="loginId" placeholder="로그인 아이디를 입력해주세요.">
+      로그인 아이디 : <input autocomplete="on" type="text" name="loginId" placeholder="로그인 아이디를 입력해주세요.">
     </div>
     <div>
-      로그인 비밀번호 : <input autocomplete="off" type="password" name="loginPw" placeholder="로그인 비밀번호를 입력해주세요.">
+      로그인 비밀번호 : <input autocomplete="on" type="password" name="loginPw" placeholder="로그인 비밀번호를 입력해주세요.">
     </div>
     <div>
-      로그인 비밀번호 확인: <input autocomplete="off" type="password" name="loginPwConfirm" placeholder="로그인 비밀번호 확인.">
+      로그인 비밀번호 확인: <input autocomplete="on" type="password" name="loginPwConfirm" placeholder="로그인 비밀번호 확인.">
     </div>
     <div>
-      로그인 비밀번호 : <input autocomplete="off" type="text" name="nm" placeholder="이름을 입력해주세요.">
+      이름 : <input autocomplete="on" type="text" name="nm" placeholder="이름을 입력해주세요.">
     </div>
 
     <div>
