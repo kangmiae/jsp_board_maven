@@ -48,8 +48,7 @@ public class UsrArticleListServlet extends HttpServlet {
     req.setAttribute("page",page);
     req.setAttribute("totalPage",totalPage);
 
-    RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/list.jsp");
-    requestDispatcher.forward(req,resp);
+    rq.jsp("/usr/article/list");
 
     MysqlUtil.closeConnection();
 

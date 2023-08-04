@@ -18,8 +18,12 @@ public class UsrArticleWriteServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     Rq rq = new Rq(req,resp);
 
+// 이렇게 해도 되고
+    rq.jsp("/usr/article/write");
+/* 이렇게 해도 되고
     RequestDispatcher requestDispatcher = req.getRequestDispatcher("/usr/article/write.jsp");
     requestDispatcher.forward(req,resp);
+*/
 
   }
 

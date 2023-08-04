@@ -35,8 +35,12 @@ public class HomeMainServlet extends HttpServlet {
 
     req.setAttribute("articleRows",articlesRows);
 
+// 이렇게 해도 되고
+    rq.jsp("/home/main");
+/* 이렇게 해도 되고
     RequestDispatcher requestDispatcher = req.getRequestDispatcher("/home/main.jsp");
     requestDispatcher.forward(req,resp);
+*/
 
     MysqlUtil.closeConnection();
 

@@ -1,5 +1,7 @@
 package com.sbs.exam.jsp.board;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -55,4 +57,21 @@ public class Rq {
 
   }
 
+  public void jsp(String jspPath) {
+    RequestDispatcher requestDispatcher = req.getRequestDispatcher(jspPath+".jsp");
+    try {
+      requestDispatcher.forward(req, resp);
+    } catch (ServletException e) {
+      throw new RuntimeException(e);
+    } catch (IOException e) {
+      throw  new RuntimeException(e);
+    }
+//이렇게 try catch해도 됨
+/*    try {
+      requestDispatcher.forward(req, resp);
+    } catch (ServletException | IOException e) {
+      throw new RuntimeException(e);
+    }
+*/
+  }
 }

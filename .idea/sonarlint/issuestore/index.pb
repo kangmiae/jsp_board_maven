@@ -15,3 +15,11 @@ H
 src/webapp/home/main.jsp,f\9\f9f7dc1fe8d0edd07a637218fb2564242386d2ba
 P
  src/webapp/usr/article/write.jsp,4\a\4af2352eeb1921138379f69a8e0a44e6cfe06679
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+q
+Asrc/main/java/com/sbs/exam/jsp/board/servlet/DoModifyServlet.java,8\0\808ab3d44b4bf44162c2c23d672abbe367a5dad2
+Q
+!src/webapp/usr/article/modify.jsp,1\d\1da1df589cf843d97c851176b56b4ddd735c7ea8
+Q
+!src/webapp/usr/article/detail.jsp,c\b\cb982658028ca33c9fa6e0b2267c3dd3a6c2a7a7
