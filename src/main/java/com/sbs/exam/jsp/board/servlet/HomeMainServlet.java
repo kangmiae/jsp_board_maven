@@ -22,6 +22,9 @@ public class HomeMainServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     Rq rq = new Rq(req,resp);
 
+    req.setAttribute("age", 54); //나이가 54인것을 req에게 알려줌, main.jsp에서 받아서 사용 할수 있다.
+    req.setAttribute("isLogined", true); //현재 로그인중인지 체크 할 수 있도록 셋팅 해 줌
+
     //DB연결을 위해 반드시 있어야 한다.
     MysqlUtil.setDBInfo("localhost","root","password","jspboard_db");
     MysqlUtil.setDevMode(true);

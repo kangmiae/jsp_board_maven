@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.logging.XMLFormatter;
 
 @WebServlet("/usr/member/doJoin")
 
@@ -27,12 +28,12 @@ public class DoMemberJoinServlet extends HttpServlet {
 
     String loginId = rq.getParam("loginId","");
     String loginPw = rq.getParam("loginPw","");
-    String name = rq.getParam("nm","");
+    String nm = rq.getParam("nm","");
 
     SecSql sql = new SecSql();
     sql.append("SELECT count(*) as cnt");
     sql.append("FROM member_t");
-    sql.append("WHERE loginid = ?", loginId);
+    sql.append("WHERE loginId = ?", loginId);
 
 // 중복체크 이런방법도 있고
     int isCnt = MysqlUtil.selectRowIntValue(sql);
@@ -40,13 +41,19 @@ public class DoMemberJoinServlet extends HttpServlet {
       rq.appendBody("<script>alert('해당 아이디로 회원이 이미 존재합니다.'); history.back(); </script>");
     }
 
+// 이것도 되야하는데 안되고 있음
+//    Boolean isBoolean = MysqlUtil.selectRowBooleanValue(sql);
+//    if (isBoolean == true) {
+//      rq.appendBody("<script>alert('해당 아이디로 회원이 이미 존재합니다.'); history.back(); </script>");
+//    }
+
     sql = new SecSql();
     sql.append("INSERT INTO member_t");
     sql.append("SET regDate = NOW() ");
     sql.append("   ,updateDate = NOW() ");
     sql.append("   ,loginId = ?", loginId);
     sql.append("   ,loginPw = ?", loginPw);
-    sql.append("   ,nm = ?", name);
+    sql.append("   ,nm = ?", nm);
 
 //  검색데이터가 여러줄이면  Rows를 아니면 Row를 사용한다.
     int id = MysqlUtil.insert(sql);

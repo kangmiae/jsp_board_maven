@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%--servlet에서 넘겨준 age를 받는다--%>
+<%
+  int age = (int) request.getAttribute("age");
+  boolean isLogined = (boolean) request.getAttribute("isLogined");
+%>
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -12,13 +18,23 @@
 <body>
 
 <h1>메인페이지</h1>
-<div>
-  <a href="/usr/article/write">게시물 작성</a>
-  &nbsp;
-  <a href="/usr/article/list">리스트로 이동</a>
-  &nbsp;
-  <a href="/usr/member/join">회원가입</a>
-</div>
+  <div>
+    <% if (isLogined) { %>
+      나이는 <%=age%>살 입니다.
+    <% } %>
+  </div>
+
+  <div>
+    <a href="/usr/article/write">게시물 작성</a>
+    &nbsp;
+    <a href="/usr/article/list">리스트로 이동</a>
+    &nbsp;
+    <a href="/usr/member/join">회원가입</a>
+    &nbsp;
+    <a href="/usr/member/login">로그인</a>
+    &nbsp;
+    <a href="/usr/member/dologout">로그아웃</a>
+  </div>
 
 </body>
 </html>
