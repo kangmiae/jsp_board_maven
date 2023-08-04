@@ -45,10 +45,10 @@
       return;
     }
 
-    form.name.value = form.name.value.trim();
-    if (form.name.value.length == 0) {
+    form.nm.value = form.nm.value.trim();
+    if (form.nm.value.length == 0) {
       alert('로그인 이름을 입력해주세요');
-      form.name.focus(); //해당 필드에 포커스가 간다.
+      form.nm.focus(); //해당 필드에 포커스가 간다.
       return;
     }
 
@@ -77,7 +77,7 @@
       로그인 비밀번호 확인: <input autocomplete="off" type="password" name="loginPwConfirm" placeholder="로그인 비밀번호 확인.">
     </div>
     <div>
-      로그인 비밀번호 : <input autocomplete="off" type="text" name="name" placeholder="이름을 입력해주세요.">
+      로그인 비밀번호 : <input autocomplete="off" type="text" name="nm" placeholder="이름을 입력해주세요.">
     </div>
 
     <div>

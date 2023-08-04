@@ -27,15 +27,15 @@ public class DoMemberJoinServlet extends HttpServlet {
 
     String loginId = rq.getParam("loginId","");
     String loginPw = rq.getParam("loginPw","");
-    String name = rq.getParam("name","");
+    String name = rq.getParam("nm","");
 
     SecSql sql = new SecSql();
-    sql.append("INSERT INTO `member`");
+    sql.append("INSERT INTO member_t");
     sql.append("SET regDate = NOW() ");
     sql.append("   ,updateDate = NOW() ");
     sql.append("   ,loginId = ?", loginId);
     sql.append("   ,loginPw = ?", loginPw);
-    sql.append("   ,`name` = ?", name);
+    sql.append("   ,nm = ?", name);
 
 //  검색데이터가 여러줄이면  Rows를 아니면 Row를 사용한다.
     int id = MysqlUtil.insert(sql);
