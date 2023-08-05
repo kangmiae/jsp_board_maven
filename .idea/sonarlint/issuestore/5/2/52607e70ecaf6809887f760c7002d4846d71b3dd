@@ -1,0 +1,8 @@
+
+K
+java:S18542"6Remove this useless assignment to local variable "id".(Ó—¸a
+<
+java:S14812"'Remove this unused "id" local variable.(Ó—¸a
+]	java:S1254"<This block of commented-out lines of code should be removed.(Ô½ãÿÿÿÿÿ8ÀƒÔ›1
+
+java:S1989="_Handle the following exceptions that could be thrown by "doGet": ServletException, IOException.(—ôÖ¢øÿÿÿÿ8ŸëØþ›1

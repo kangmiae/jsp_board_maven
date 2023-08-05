@@ -32,7 +32,7 @@ public class DoMemberLoginServlet extends HttpServlet {
 
 // 로그인시 필요정보 가지고 오기
     SecSql sql = new SecSql();
-    sql.append("SELECT id, loginId, loginPw, nm");
+    sql.append("SELECT id, loginId, nm");
     sql.append("FROM member_t");
     sql.append("WHERE loginId = ?", loginId);
 

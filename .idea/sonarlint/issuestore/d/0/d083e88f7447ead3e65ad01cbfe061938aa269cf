@@ -1,0 +1,10 @@
+
+g	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ί©βÿ›1
+g	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ί©βÿ›1
+g	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8ί©βÿ›1
+]	java:S125"<This block of commented-out lines of code should be removed.(ρ¥ωψÿÿÿÿ8δ©βÿ›1
+a
+java:S2147B"DCombine this catch with the one at line 64, which has the same body.(ο­£Δ8η©βÿ›1
+X	java:S125F"<This block of commented-out lines of code should be removed.(½‘Ρ³8θ©βÿ›1
+^
+java:S1128"ARemove this unused import 'java.io.UnsupportedEncodingException'.(Γµ…“8θ©βÿ›1

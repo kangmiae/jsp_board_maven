@@ -2,8 +2,9 @@
 
 <%--servlet에서 넘겨준 age를 받는다--%>
 <%
-  int age = (int) request.getAttribute("age");
   boolean isLogined = (boolean) request.getAttribute("isLogined");
+  String loginedMemberId = (String) request.getAttribute("loginedMemberId");
+  String loginedMemberNm = (String) request.getAttribute("loginedMemberNm");
 %>
 
 <!doctype html>
@@ -18,11 +19,6 @@
 <body>
 
 <h1>메인페이지</h1>
-  <div>
-    <% if (isLogined) { %>
-      나이는 <%=age%>살 입니다.
-    <% } %>
-  </div>
 
   <div>
     <a href="/usr/article/write">게시물 작성</a>
@@ -31,9 +27,16 @@
     &nbsp;
     <a href="/usr/member/join">회원가입</a>
     &nbsp;
-    <a href="/usr/member/login">로그인</a>
-    &nbsp;
-    <a href="/usr/member/dologout">로그아웃</a>
+  </div>
+
+  <div>
+    <% if (!isLogined) { %>
+      <a href="/usr/member/login">로그인</a>
+    <% }
+    else { %>
+      <%= loginedMemberId%>번 회원님 환영합니다.
+      <a href="/usr/member/doLogout">로그아웃</a>
+    <% } %>
   </div>
 
 </body>
